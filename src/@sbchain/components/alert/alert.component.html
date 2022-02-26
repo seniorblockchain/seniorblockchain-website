@@ -1,0 +1,82 @@
+<div
+    class="sbchain-alert-container"
+    *ngIf="!dismissible || dismissible && !dismissed"
+    [@fadeIn]="!dismissed"
+    [@fadeOut]="!dismissed">
+
+    <!-- Border -->
+    <div
+        class="sbchain-alert-border"
+        *ngIf="appearance === 'border'"></div>
+
+    <!-- Icon -->
+    <div
+        class="sbchain-alert-icon"
+        *ngIf="showIcon">
+
+        <!-- Custom icon -->
+        <div class="sbchain-alert-custom-icon">
+            <ng-content select="[sbchainAlertIcon]"></ng-content>
+        </div>
+
+        <!-- Default icons -->
+        <div class="sbchain-alert-default-icon">
+
+            <mat-icon
+                *ngIf="type === 'primary'"
+                [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+
+            <mat-icon
+                *ngIf="type === 'accent'"
+                [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+
+            <mat-icon
+                *ngIf="type === 'warn'"
+                [svgIcon]="'heroicons_solid:x-circle'"></mat-icon>
+
+            <mat-icon
+                *ngIf="type === 'basic'"
+                [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+
+            <mat-icon
+                *ngIf="type === 'info'"
+                [svgIcon]="'heroicons_solid:information-circle'"></mat-icon>
+
+            <mat-icon
+                *ngIf="type === 'success'"
+                [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+
+            <mat-icon
+                *ngIf="type === 'warning'"
+                [svgIcon]="'heroicons_solid:exclamation'"></mat-icon>
+
+            <mat-icon
+                *ngIf="type === 'error'"
+                [svgIcon]="'heroicons_solid:x-circle'"></mat-icon>
+
+        </div>
+
+    </div>
+
+    <!-- Content -->
+    <div class="sbchain-alert-content">
+
+        <div class="sbchain-alert-title">
+            <ng-content select="[sbchainAlertTitle]"></ng-content>
+        </div>
+
+        <div class="sbchain-alert-message">
+            <ng-content></ng-content>
+        </div>
+
+    </div>
+
+    <!-- Dismiss button -->
+    <button
+        class="sbchain-alert-dismiss-button"
+        mat-icon-button
+        (click)="dismiss()">
+        <mat-icon [svgIcon]="'heroicons_solid:x'"></mat-icon>
+    </button>
+
+</div>

@@ -1,0 +1,114 @@
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
+
+
+
+    <!-- Header -->
+    <div class="relative flex-0 py-8 px-4 sm:p-16 overflow-hidden bg-gray-800 dark">
+        <!-- Background - @formatter:off -->
+        <!-- Rings -->
+        <svg class="absolute inset-0 pointer-events-none" viewBox="0 0 960 540" width="100%" height="100%"
+            preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+            <g class="text-gray-700 opacity-25" fill="none" stroke="currentColor" stroke-width="100">
+                <circle r="234" cx="196" cy="23"></circle>
+                <circle r="234" cx="790" cy="491"></circle>
+            </g>
+        </svg>
+        <!-- @formatter:on -->
+        <div class="z-10 relative flex flex-col items-center">
+            <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
+                Node
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex flex-auto p-6 sm:p-10">
+
+        <div class="flex flex-col flex-auto w-full max-w-xs sm:max-w-5xl mx-auto">
+
+            <sbchain-card class="flex flex-col w-full filter-article">
+                <img class="object-cover" src="assets/images/node/node.png" alt="Card cover image">
+                <div class="m-8">
+                    <div class="text-2xl font-semibold leading-tight">Blockcore Full Node</div>
+                    <div class="mt-4">The node software is a full node software that runs the blockchain network.
+                        It is compatible with Bitcoin and utilized by other blockchains at the primary full node.</div>
+                </div>
+            </sbchain-card>
+
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow mt-8">
+                <div class="flex items-center">
+                    <div class="flex flex-col">
+                        <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Download
+                            Node
+                        </div>
+                    </div>
+                </div>
+                <div class="my-8 space-y-8">
+                    <div class="flex flex-col">
+                        <p>
+                            Go to the <a target="_blank" class="text-primary"
+                                href="https://github.com/seniorblockchain/blockcore-nodes/releases">releases page</a> to
+                            find a unified multi-chain node. Separate downloads for Windows, Linux and macOS is
+                            available.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow mt-8">
+                <div class="flex items-center">
+                    <div class="flex flex-col">
+                        <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Docker
+                        </div>
+                    </div>
+                </div>
+                <div class="my-8 space-y-8">
+                    <div class="flex flex-col prose max-w-full">
+                        <p>
+                            All our Blockcore Reference Nodes is published to our <a target="_blank"
+                                class="text-primary" href="https://hub.docker.com/orgs/blockcore/repositories">Docker
+                                Hub</a>.
+                        </p>
+                        <p>
+                            It is super easy to spin up a new instance of any of the nodes, they all follow the same
+                            syntax (name and version).
+                        </p>
+                        We advice on using specific version when using docker, like our example below. The "latest" tag
+                        can also be used.
+                        <p>
+                            Run the Blockcore Reference Node for SBC blockchain in interactive mode:
+                        </p>
+
+                        <textarea sbchain-highlight lang="bash">
+                                docker run blockcore/node-multi:latest --chain=SBC
+                        </textarea>
+                        <p>
+                            To spin up a docker container instance in the background, apply the "-d" tag.
+                        </p>
+                        <p>
+                            Run the Blockcore Reference Node for City Chain blockchain in background:
+                        </p>
+                        <textarea sbchain-highlight lang="bash">
+                            docker run blockcore/node-multi:latest -d --chain=SBC
+                        </textarea>
+                        <p>
+                            If you want to access or expose the P2P port, RPC port or API port, you must do a port
+                            mapping that is specific for the chain you are launching.
+                        </p>
+                        <p>
+                            You can find the correct and default TCP port for each blockchain on:
+
+                            <a href="https://chains.blockcore.net">https://chains.blockcore.net</a>
+                        </p>
+                        <textarea sbchain-highlight lang="bash">
+                            docker run blockcore/node-multi:latest -p 8080:15008 -d --chain=SBC -apiuri=http://0.0.0.0:15008
+                        </textarea>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

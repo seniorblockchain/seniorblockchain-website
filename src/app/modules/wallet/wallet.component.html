@@ -1,0 +1,142 @@
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
+
+
+
+    <!-- Header -->
+    <div class="relative flex-0 py-8 px-4 sm:p-16 overflow-hidden bg-gray-800 dark">
+        <!-- Background - @formatter:off -->
+        <!-- Rings -->
+        <svg class="absolute inset-0 pointer-events-none"
+             viewBox="0 0 960 540" width="100%" height="100%" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+            <g class="text-gray-700 opacity-25" fill="none" stroke="currentColor" stroke-width="100">
+                <circle r="234" cx="196" cy="23"></circle>
+                <circle r="234" cx="790" cy="491"></circle>
+            </g>
+        </svg>
+        <!-- @formatter:on -->
+        <div class="z-10 relative flex flex-col items-center">
+            <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
+               Wallet
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex flex-auto p-6 sm:p-10">
+
+        <div class="flex flex-col flex-auto w-full max-w-xs sm:max-w-5xl mx-auto">
+
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div class="flex items-center">
+                    <div class="flex flex-col">
+                        <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Blockcore Hub
+                        </div>
+                    </div>
+                </div>
+                <div class="my-8 space-y-8">
+                    <div class="flex flex-col">
+                        <p>
+                            The Blockcore Hub is a unified app that has all the normal wallet features you'd expect, but additionally it gives you access to new insights, features of the Senior Blockchain Platform is available through the same app, and a lot more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full min-w-0 mt-8">
+                <ng-container >
+                    <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
+                        <!-- Logo -->
+                        <div class="flex flex-col flex-auto w-full p-8 text-center">
+                            <div class="w-20 h-20 mx-auto overflow-hidden">
+                                <mat-icon class="icon-size-14 text-primary" svgIcon="iconsmind:windows_microsoft"></mat-icon>
+                            </div>
+                            <div class="mt-6 font-medium">Windows 10</div>
+                            <div class="text-secondary">64bit</div>
+                        </div>
+                        <!-- Download -->
+                        <div class="flex items-center w-full border-t divide-x">
+                            <a
+                                class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-win-x64.exe'">
+                                <mat-icon
+                                    class="icon-size-5 text-hint"
+                                    [svgIcon]="'heroicons_solid:download'"></mat-icon>
+                                <span class="ml-2">direct download</span>
+                            </a>
+                            <a
+                                class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-win-x64.exe'">
+                                <mat-icon
+                                    class="icon-size-5 text-hint"
+                                    [svgIcon]="'heroicons_solid:cloud-download'"></mat-icon>
+                                <span class="ml-2">github</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
+                        <!-- Logo -->
+                        <div class="flex flex-col flex-auto w-full p-8 text-center">
+                            <div class="w-20 h-20 mx-auto overflow-hidden">
+                                <mat-icon class="icon-size-14 text-primary" svgIcon="iconsmind:ios_apple"></mat-icon>
+                            </div>
+                            <div class="mt-6 font-medium">Mac</div>
+                            <div class="text-secondary">dmg file</div>
+                        </div>
+                        <!-- Download -->
+                        <div class="flex items-center w-full border-t divide-x">
+                            <a
+                                class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-mac.dmg'">
+                                <mat-icon
+                                    class="icon-size-5 text-hint"
+                                    [svgIcon]="'heroicons_solid:download'"></mat-icon>
+                                <span class="ml-2">direct download</span>
+                            </a>
+                            <a
+                                class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-mac.dmg'">
+                                <mat-icon
+                                    class="icon-size-5 text-hint"
+                                    [svgIcon]="'heroicons_solid:cloud-download'"></mat-icon>
+                                <span class="ml-2">github</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
+                        <!-- Logo -->
+                        <div class="flex flex-col flex-auto w-full p-8 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full overflow-hidden">
+                                <mat-icon class="icon-size-14 text-primary" svgIcon="iconsmind:linux"></mat-icon>
+                            </div>
+                            <div class="mt-6 font-medium">Linux</div>
+                            <div class="text-secondary">64bit - 32bit</div>
+                        </div>
+                        <!-- Download -->
+                        <div class="flex items-center w-full border-t divide-x">
+                            <a
+                                class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-linux-x86_64.AppImage'">
+                                <mat-icon
+                                    class="icon-size-5 text-hint"
+                                    [svgIcon]="'heroicons_solid:download'"></mat-icon>
+                                <span class="ml-2">direct download</span>
+                            </a>
+                            <a
+                                class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-linux-x86_64.AppImage'">
+                                <mat-icon
+                                    class="icon-size-5 text-hint"
+                                    [svgIcon]="'heroicons_solid:cloud-download'"></mat-icon>
+                                <span class="ml-2">github</span>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

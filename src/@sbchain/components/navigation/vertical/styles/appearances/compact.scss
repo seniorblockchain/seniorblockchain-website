@@ -1,0 +1,110 @@
+/* Variables */
+$sbchain-vertical-navigation-compact-width: 112px;
+
+sbchain-vertical-navigation {
+
+    /* Compact appearance overrides */
+    &.sbchain-vertical-navigation-appearance-compact {
+        width: $sbchain-vertical-navigation-compact-width;
+        min-width: $sbchain-vertical-navigation-compact-width;
+        max-width: $sbchain-vertical-navigation-compact-width;
+
+        /* Left positioned */
+        &.sbchain-vertical-navigation-position-left {
+
+            /* Side mode */
+            &.sbchain-vertical-navigation-mode-side {
+                margin-left: -$sbchain-vertical-navigation-compact-width;
+            }
+
+            /* Opened */
+            &.sbchain-vertical-navigation-opened {
+                margin-left: 0;
+            }
+        }
+
+        /* Right positioned */
+        &.sbchain-vertical-navigation-position-right {
+
+            /* Side mode */
+            &.sbchain-vertical-navigation-mode-side {
+                margin-right: -$sbchain-vertical-navigation-compact-width;
+            }
+
+            /* Opened */
+            &.sbchain-vertical-navigation-opened {
+                margin-right: 0;
+            }
+
+            /* Aside wrapper */
+            .sbchain-vertical-navigation-aside-wrapper {
+                left: auto;
+                right: $sbchain-vertical-navigation-compact-width;
+            }
+        }
+
+        /* Wrapper */
+        .sbchain-vertical-navigation-wrapper {
+
+            /* Content */
+            .sbchain-vertical-navigation-content {
+
+                > sbchain-vertical-navigation-aside-item,
+                > sbchain-vertical-navigation-basic-item {
+
+                    .sbchain-vertical-navigation-item-wrapper {
+                        margin: 4px 8px 0 8px;
+
+                        .sbchain-vertical-navigation-item {
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 12px;
+                            border-radius: 6px;
+
+                            .sbchain-vertical-navigation-item-icon {
+                                margin-right: 0;
+                            }
+
+                            .sbchain-vertical-navigation-item-title-wrapper {
+                                margin-top: 8px;
+
+                                .sbchain-vertical-navigation-item-title {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    text-align: center;
+                                    line-height: 16px;
+                                }
+
+                                .sbchain-vertical-navigation-item-subtitle {
+                                    display: none !important;
+                                }
+                            }
+
+                            .sbchain-vertical-navigation-item-badge {
+                                position: absolute;
+                                top: 12px;
+                                left: 64px;
+                            }
+                        }
+                    }
+
+                    > sbchain-vertical-navigation-collapsable-item {
+                        display: none
+                    }
+
+                    > sbchain-vertical-navigation-group-item {
+
+                        > .sbchain-vertical-navigation-item-wrapper {
+                            display: none
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Aside wrapper */
+        .sbchain-vertical-navigation-aside-wrapper {
+            left: $sbchain-vertical-navigation-compact-width;
+        }
+    }
+}

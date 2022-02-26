@@ -1,0 +1,192 @@
+/* Variables */
+$sbchain-vertical-navigation-width: 280px;
+$sbchain-vertical-navigation-dense-width: 80px;
+
+sbchain-vertical-navigation {
+
+    /* Dense appearance overrides */
+    &.sbchain-vertical-navigation-appearance-dense {
+
+        &:not(.sbchain-vertical-navigation-mode-over) {
+            width: $sbchain-vertical-navigation-dense-width;
+            min-width: $sbchain-vertical-navigation-dense-width;
+            max-width: $sbchain-vertical-navigation-dense-width;
+
+            /* Left positioned */
+            &.sbchain-vertical-navigation-position-left {
+
+                /* Side mode */
+                &.sbchain-vertical-navigation-mode-side {
+                    margin-left: -$sbchain-vertical-navigation-dense-width;
+                }
+
+                /* Opened */
+                &.sbchain-vertical-navigation-opened {
+                    margin-left: 0;
+                }
+            }
+
+            /* Right positioned */
+            &.sbchain-vertical-navigation-position-right {
+
+                /* Side mode */
+                &.sbchain-vertical-navigation-mode-side {
+                    margin-right: -$sbchain-vertical-navigation-dense-width;
+                }
+
+                /* Opened */
+                &.sbchain-vertical-navigation-opened {
+                    margin-right: 0;
+                }
+
+                /* Aside wrapper */
+                .sbchain-vertical-navigation-aside-wrapper {
+                    left: auto;
+                    right: $sbchain-vertical-navigation-dense-width;
+                }
+
+                &.sbchain-vertical-navigation-hover {
+
+                    .sbchain-vertical-navigation-aside-wrapper {
+                        left: auto;
+                        right: $sbchain-vertical-navigation-width;
+                    }
+                }
+            }
+        }
+
+        /* Wrapper */
+        .sbchain-vertical-navigation-wrapper {
+
+            /* Content */
+            .sbchain-vertical-navigation-content {
+
+                sbchain-vertical-navigation-aside-item,
+                sbchain-vertical-navigation-basic-item,
+                sbchain-vertical-navigation-collapsable-item,
+                sbchain-vertical-navigation-group-item {
+
+                    .sbchain-vertical-navigation-item-wrapper {
+
+                        .sbchain-vertical-navigation-item {
+                            width: $sbchain-vertical-navigation-dense-width - 24px;
+                            min-width: $sbchain-vertical-navigation-dense-width - 24px;
+                            max-width: $sbchain-vertical-navigation-dense-width - 24px;
+
+                            .sbchain-vertical-navigation-item-arrow,
+                            .sbchain-vertical-navigation-item-badge,
+                            .sbchain-vertical-navigation-item-title-wrapper {
+                                transition: opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+                            }
+                        }
+                    }
+                }
+
+                sbchain-vertical-navigation-group-item {
+
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        &:not(.sbchain-vertical-navigation-hover):not(.sbchain-vertical-navigation-mode-over) {
+
+            /* Wrapper */
+            .sbchain-vertical-navigation-wrapper {
+
+                /* Content */
+                .sbchain-vertical-navigation-content {
+
+                    .sbchain-vertical-navigation-item-wrapper {
+
+                        .sbchain-vertical-navigation-item {
+                            padding: 10px 16px;
+
+                            .sbchain-vertical-navigation-item-arrow,
+                            .sbchain-vertical-navigation-item-badge,
+                            .sbchain-vertical-navigation-item-title-wrapper {
+                                white-space: nowrap;
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                    sbchain-vertical-navigation-collapsable-item {
+
+                        .sbchain-vertical-navigation-item-children {
+                            display: none;
+                        }
+                    }
+
+                    sbchain-vertical-navigation-group-item {
+
+                        > .sbchain-vertical-navigation-item-wrapper {
+
+                            .sbchain-vertical-navigation-item {
+
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 20px;
+                                    width: 23px;
+                                    border-top-width: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Aside wrapper */
+        .sbchain-vertical-navigation-aside-wrapper {
+            left: $sbchain-vertical-navigation-dense-width;
+        }
+
+        /* Hover */
+        &.sbchain-vertical-navigation-hover {
+
+            .sbchain-vertical-navigation-wrapper {
+                width: $sbchain-vertical-navigation-width;
+
+                .sbchain-vertical-navigation-content {
+
+                    .sbchain-vertical-navigation-item-wrapper {
+
+                        .sbchain-vertical-navigation-item {
+                            width: $sbchain-vertical-navigation-width - 24px;
+                            min-width: $sbchain-vertical-navigation-width - 24px;
+                            max-width: $sbchain-vertical-navigation-width - 24px;
+
+                            .sbchain-vertical-navigation-item-arrow,
+                            .sbchain-vertical-navigation-item-badge,
+                            .sbchain-vertical-navigation-item-title-wrapper {
+                                white-space: nowrap;
+                                animation: removeWhiteSpaceNoWrap 1ms linear 350ms;
+                                animation-fill-mode: forwards;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sbchain-vertical-navigation-aside-wrapper {
+                left: $sbchain-vertical-navigation-width;
+            }
+        }
+    }
+}
+
+@keyframes removeWhiteSpaceNoWrap {
+    0% {
+        white-space: nowrap
+    }
+    99% {
+        white-space: nowrap
+    }
+    100% {
+        white-space: normal;
+    }
+}

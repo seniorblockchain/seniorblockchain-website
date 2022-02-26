@@ -1,0 +1,103 @@
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
+
+
+
+    <!-- Header -->
+    <div class="relative flex-0 py-8 px-4 sm:p-16 overflow-hidden bg-gray-800 dark">
+        <!-- Background - @formatter:off -->
+        <!-- Rings -->
+        <svg class="absolute inset-0 pointer-events-none" viewBox="0 0 960 540" width="100%" height="100%"
+            preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+            <g class="text-gray-700 opacity-25" fill="none" stroke="currentColor" stroke-width="100">
+                <circle r="234" cx="196" cy="23"></circle>
+                <circle r="234" cx="790" cy="491"></circle>
+            </g>
+        </svg>
+        <!-- @formatter:on -->
+        <div class="z-10 relative flex flex-col items-center">
+            <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
+                Contact Us
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex flex-auto p-6 sm:p-10">
+
+        <div class="flex flex-col flex-auto w-full max-w-xs sm:max-w-5xl mx-auto">
+
+
+            <sbchain-card class="flex flex-col w-full filter-article">
+                <div class="grid place-items-center">
+                    <ng-lottie width="500px" height="300px" [options]="options"
+                        (animationCreated)="animationCreated($event)"></ng-lottie>
+                </div>
+
+
+                <div class="m-8">
+                    <div class="text-2xl font-semibold leading-tight">Stay connected!</div>
+                    <div class="mt-4">Get updates from Senior Blockchain by engaging with the community</div>
+                </div>
+            </sbchain-card>
+
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full min-w-0 mt-8">
+                <ng-container>
+                    <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
+                        <!-- Logo -->
+                        <div class="flex flex-col flex-auto w-full p-8 text-center">
+                            <div class="mt-6 font-medium">E-Mail</div>
+                            <div class="text-secondary">post@seniorblockchain.io</div>
+                        </div>
+                        <!-- Action -->
+                        <div class="flex items-center w-full border-t divide-x">
+                            <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'mailto:post@seniorblockchain.io'">
+                                <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:mail'"></mat-icon>
+                                <span class="ml-2">E-Mail</span>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
+                        <!-- Logo -->
+                        <div class="flex flex-col flex-auto w-full p-8 text-center">
+                            <div class="mt-6 font-medium">Telegram Channel</div>
+                            <div class="text-secondary">@seniorblockchain</div>
+                        </div>
+                        <!-- Download -->
+                        <div class="flex items-center w-full border-t divide-x">
+                            <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://t.me/seniorblockchain'">
+                                <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:speakerphone'">
+                                </mat-icon>
+                                <span class="ml-2">@SeniorBlockchain</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
+                        <!-- Logo -->
+                        <div class="flex flex-col flex-auto w-full p-8 text-center">
+
+                            <div class="mt-6 font-medium">Discord</div>
+                            <div class="text-secondary">discord.gg/y2cufBjr</div>
+                        </div>
+                        <!-- Download -->
+                        <div class="flex items-center w-full border-t divide-x">
+                            <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://discord.gg/y2cufBjr'">
+                                <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:chat'"></mat-icon>
+                                <span class="ml-2">SeniorBlockchain</span>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

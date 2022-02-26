@@ -1,0 +1,30 @@
+<!-- Flippable card -->
+<ng-container *ngIf="flippable">
+
+    <!-- Front -->
+    <div class="sbchain-card-front">
+        <ng-content select="[sbchainCardFront]"></ng-content>
+    </div>
+
+    <!-- Back -->
+    <div class="sbchain-card-back">
+        <ng-content select="[sbchainCardBack]"></ng-content>
+    </div>
+
+</ng-container>
+
+<!-- Normal card -->
+<ng-container *ngIf="!flippable">
+
+    <!-- Content -->
+    <ng-content></ng-content>
+
+    <!-- Expansion -->
+    <div
+        class="sbchain-card-expansion"
+        *ngIf="expanded"
+        [@expandCollapse]>
+        <ng-content select="[sbchainCardExpansion]"></ng-content>
+    </div>
+
+</ng-container>
