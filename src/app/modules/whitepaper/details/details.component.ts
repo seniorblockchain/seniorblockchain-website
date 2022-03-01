@@ -3,7 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { MatTabGroup } from '@angular/material/tabs';
 import { Subject, takeUntil } from 'rxjs';
 import { SBChainMediaWatcherService } from '@sbchain/services/media-watcher';
-import { Category, Course } from 'app/modules/whitepaper/whitepaper.types';
+import { Category, Content } from 'app/modules/whitepaper/whitepaper.types';
 import { WhitePaperService } from 'app/modules/whitepaper/whitepaper.service';
 
 @Component({
@@ -14,9 +14,9 @@ import { WhitePaperService } from 'app/modules/whitepaper/whitepaper.service';
 })
 export class WhitePaperDetailsComponent implements OnInit, OnDestroy
 {
-    @ViewChild('courseSteps', {static: true}) courseSteps: MatTabGroup;
+    @ViewChild('contentSteps', {static: true}) contentSteps: MatTabGroup;
     categories: Category[];
-    course: Course;
+    content: Content;
     currentStep: number = 0;
     drawerMode: 'over' | 'side' = 'side';
     drawerOpened: boolean = true;
@@ -56,16 +56,16 @@ export class WhitePaperDetailsComponent implements OnInit, OnDestroy
                 this._changeDetectorRef.markForCheck();
             });
 
-        // Get the course
-        this._whitepaperService.course$
+        // Get the content
+        this._whitepaperService.content$
             .pipe(takeUntil(this._unsubscribeAll))
-            .subscribe((course: Course) => {
+            .subscribe((content: Content) => {
 
-                // Get the course
-                this.course = course;
+                // Get the content
+                this.content = content;
 
                 // Go to step
-                this.goToStep(course.progress.currentStep);
+                this.goToStep(content.progress.currentStep);
 
                 // Mark for check
                 this._changeDetectorRef.markForCheck();
@@ -118,7 +118,7 @@ export class WhitePaperDetailsComponent implements OnInit, OnDestroy
         this.currentStep = step;
 
         // Go to the step
-        this.courseSteps.selectedIndex = this.currentStep;
+        this.contentSteps.selectedIndex = this.currentStep;
 
         // Mark for check
         this._changeDetectorRef.markForCheck();
@@ -148,7 +148,7 @@ export class WhitePaperDetailsComponent implements OnInit, OnDestroy
     goToNextStep(): void
     {
         // Return if we already on the last step
-        if ( this.currentStep === this.course.totalSteps - 1 )
+        if ( this.currentStep === this.content.totalSteps - 1 )
         {
             return;
         }

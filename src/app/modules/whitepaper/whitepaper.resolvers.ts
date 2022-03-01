@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { catchError, Observable, throwError } from 'rxjs';
-import { Category, Course } from 'app/modules/whitepaper/whitepaper.types';
+import { Category, Content } from 'app/modules/whitepaper/whitepaper.types';
 import { WhitePaperService } from 'app/modules/whitepaper/whitepaper.service';
 
 @Injectable({
@@ -35,7 +35,7 @@ export class WhitePaperCategoriesResolver implements Resolve<any>
 @Injectable({
     providedIn: 'root'
 })
-export class WhitePaperCoursesResolver implements Resolve<any>
+export class WhitePaperContentsResolver implements Resolve<any>
 {
     /**
      * Constructor
@@ -54,16 +54,16 @@ export class WhitePaperCoursesResolver implements Resolve<any>
      * @param route
      * @param state
      */
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Course[]>
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Content[]>
     {
-        return this._whitepaperService.getCourses();
+        return this._whitepaperService.getContents();
     }
 }
 
 @Injectable({
     providedIn: 'root'
 })
-export class WhitePaperCourseResolver implements Resolve<any>
+export class WhitePaperContentResolver implements Resolve<any>
 {
     /**
      * Constructor
@@ -85,9 +85,9 @@ export class WhitePaperCourseResolver implements Resolve<any>
      * @param route
      * @param state
      */
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Course>
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Content>
     {
-        return this._whitepaperService.getCourseById(route.paramMap.get('id'))
+        return this._whitepaperService.getContentById(route.paramMap.get('id'))
                    .pipe(
                        // Error here means the requested task is not available
                        catchError((error) => {

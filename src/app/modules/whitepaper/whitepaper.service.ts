@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, map, Observable, of, switchMap, tap, throwError } from 'rxjs';
-import { Category, Course } from 'app/modules/whitepaper/whitepaper.types';
+import { Category, Content } from 'app/modules/whitepaper/whitepaper.types';
 
 @Injectable({
     providedIn: 'root'
@@ -10,8 +10,8 @@ export class WhitePaperService
 {
     // Private
     private _categories: BehaviorSubject<Category[] | null> = new BehaviorSubject(null);
-    private _course: BehaviorSubject<Course | null> = new BehaviorSubject(null);
-    private _courses: BehaviorSubject<Course[] | null> = new BehaviorSubject(null);
+    private _content: BehaviorSubject<Content | null> = new BehaviorSubject(null);
+    private _contents: BehaviorSubject<Content[] | null> = new BehaviorSubject(null);
 
     /**
      * Constructor
@@ -33,19 +33,19 @@ export class WhitePaperService
     }
 
     /**
-     * Getter for courses
+     * Getter for contents
      */
-    get courses$(): Observable<Course[]>
+    get contents$(): Observable<Content[]>
     {
-        return this._courses.asObservable();
+        return this._contents.asObservable();
     }
 
     /**
-     * Getter for course
+     * Getter for content
      */
-    get course$(): Observable<Course>
+    get content$(): Observable<Content>
     {
-        return this._course.asObservable();
+        return this._content.asObservable();
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -65,39 +65,39 @@ export class WhitePaperService
     }
 
     /**
-     * Get courses
+     * Get contents
      */
-    getCourses(): Observable<Course[]>
+    getContents(): Observable<Content[]>
     {
-        return this._httpClient.get<Course[]>('api/apps/whitepaper/courses').pipe(
+        return this._httpClient.get<Content[]>('api/apps/whitepaper/contents').pipe(
             tap((response: any) => {
-                this._courses.next(response);
+                this._contents.next(response);
             })
         );
     }
 
     /**
-     * Get course by id
+     * Get content by id
      */
-    getCourseById(id: string): Observable<Course>
+    getContentById(id: string): Observable<Content>
     {
-        return this._httpClient.get<Course>('api/apps/whitepaper/courses/course', {params: {id}}).pipe(
-            map((course) => {
+        return this._httpClient.get<Content>('api/apps/whitepaper/contents/content', {params: {id}}).pipe(
+            map((content) => {
 
-                // Update the course
-                this._course.next(course);
+                // Update the content
+                this._content.next(content);
 
-                // Return the course
-                return course;
+                // Return the content
+                return content;
             }),
-            switchMap((course) => {
+            switchMap((content) => {
 
-                if ( !course )
+                if ( !content )
                 {
-                    return throwError('Could not found course with id of ' + id + '!');
+                    return throwError('Could not found content with id of ' + id + '!');
                 }
 
-                return of(course);
+                return of(content);
             })
         );
     }

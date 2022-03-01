@@ -5,7 +5,7 @@ export interface Category
     slug?: string;
 }
 
-export interface Course
+export interface Content
 {
     id?: string;
     title?: string;

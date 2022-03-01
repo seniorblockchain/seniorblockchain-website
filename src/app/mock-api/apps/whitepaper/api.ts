@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Injectable } from '@angular/core';
 import { cloneDeep } from 'lodash-es';
 import { SBChainMockApiService } from '@sbchain/lib/mock-api/mock-api.service';
-import { categories as categoriesData, courses as coursesData, demoCourseSteps as demoCourseStepsData } from 'app/mock-api/apps/whitepaper/data';
+import { categories as categoriesData, contents as contentsData, ContentSteps as ContentStepsData } from 'app/mock-api/apps/whitepaper/data';
 
 @Injectable({
     providedIn: 'root'
@@ -9,8 +10,8 @@ import { categories as categoriesData, courses as coursesData, demoCourseSteps a
 export class WhitePaperMockApi
 {
     private _categories: any[] = categoriesData;
-    private _courses: any[] = coursesData;
-    private _demoCourseSteps: any[] = demoCourseStepsData;
+    private _contents: any[] = contentsData;
+    private _ContentSteps: any[] = ContentStepsData;
 
     /**
      * Constructor
@@ -47,42 +48,42 @@ export class WhitePaperMockApi
             });
 
         // -----------------------------------------------------------------------------------------------------
-        // @ Courses - GET
+        // @ Contents - GET
         // -----------------------------------------------------------------------------------------------------
         this._sbchainMockApiService
-            .onGet('api/apps/whitepaper/courses')
+            .onGet('api/apps/whitepaper/contents')
             .reply(() => {
 
-                // Clone the courses
-                const courses = cloneDeep(this._courses);
+                // Clone the contents
+                const contents = cloneDeep(this._contents);
 
-                return [200, courses];
+                return [200, contents];
             });
 
         // -----------------------------------------------------------------------------------------------------
-        // @ Course - GET
+        // @ Content - GET
         // -----------------------------------------------------------------------------------------------------
         this._sbchainMockApiService
-            .onGet('api/apps/whitepaper/courses/course')
+            .onGet('api/apps/whitepaper/contents/content')
             .reply(({request}) => {
 
                 // Get the id from the params
                 const id = request.params.get('id');
 
-                // Clone the courses and steps
-                const courses = cloneDeep(this._courses);
-                const steps = cloneDeep(this._demoCourseSteps);
+                // Clone the contents and steps
+                const contents = cloneDeep(this._contents);
+                const steps = cloneDeep(this._ContentSteps);
 
-                // Find the course and attach steps to it
-                const course = courses.find(item => item.id === id);
-                if ( course )
+                // Find the content and attach steps to it
+                const content = contents.find(item => item.id === id);
+                if ( content )
                 {
-                    course.steps = steps;
+                    content.steps = steps;
                 }
 
                 return [
                     200,
-                    course
+                    content
                 ];
             });
     }

@@ -4,7 +4,7 @@ import { MatSelectChange } from '@angular/material/select';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { BehaviorSubject, combineLatest, Subject, takeUntil } from 'rxjs';
 import { WhitePaperService } from 'app/modules/whitepaper/whitepaper.service';
-import { Category, Course } from 'app/modules/whitepaper/whitepaper.types';
+import { Category, Content } from 'app/modules/whitepaper/whitepaper.types';
 
 @Component({
     selector       : 'whitepaper-list',
@@ -15,8 +15,8 @@ import { Category, Course } from 'app/modules/whitepaper/whitepaper.types';
 export class WhitePaperListComponent implements OnInit, OnDestroy
 {
     categories: Category[];
-    courses: Course[];
-    filteredCourses: Course[];
+    contents: Content[];
+    filteredContents: Content[];
     filters: {
         categorySlug$: BehaviorSubject<string>;
         query$: BehaviorSubject<string>;
@@ -60,41 +60,41 @@ export class WhitePaperListComponent implements OnInit, OnDestroy
                 this._changeDetectorRef.markForCheck();
             });
 
-        // Get the courses
-        this._whitepaperService.courses$
+        // Get the contents
+        this._whitepaperService.contents$
             .pipe(takeUntil(this._unsubscribeAll))
-            .subscribe((courses: Course[]) => {
-                this.courses = this.filteredCourses = courses;
+            .subscribe((contents: Content[]) => {
+                this.contents = this.filteredContents = contents;
 
                 // Mark for check
                 this._changeDetectorRef.markForCheck();
             });
 
-        // Filter the courses
+        // Filter the contents
         combineLatest([this.filters.categorySlug$, this.filters.query$, this.filters.hideCompleted$])
             .subscribe(([categorySlug, query, hideCompleted]) => {
 
-                // Reset the filtered courses
-                this.filteredCourses = this.courses;
+                // Reset the filtered contents
+                this.filteredContents = this.contents;
 
                 // Filter by category
                 if ( categorySlug !== 'all' )
                 {
-                    this.filteredCourses = this.filteredCourses.filter(course => course.category === categorySlug);
+                    this.filteredContents = this.filteredContents.filter(content => content.category === categorySlug);
                 }
 
                 // Filter by search query
                 if ( query !== '' )
                 {
-                    this.filteredCourses = this.filteredCourses.filter(course => course.title.toLowerCase().includes(query.toLowerCase())
-                        || course.description.toLowerCase().includes(query.toLowerCase())
-                        || course.category.toLowerCase().includes(query.toLowerCase()));
+                    this.filteredContents = this.filteredContents.filter(content => content.title.toLowerCase().includes(query.toLowerCase())
+                        || content.description.toLowerCase().includes(query.toLowerCase())
+                        || content.category.toLowerCase().includes(query.toLowerCase()));
                 }
 
                 // Filter by completed
                 if ( hideCompleted )
                 {
-                    this.filteredCourses = this.filteredCourses.filter(course => course.progress.completed === 0);
+                    this.filteredContents = this.filteredContents.filter(content => content.progress.completed === 0);
                 }
             });
     }
@@ -134,7 +134,7 @@ export class WhitePaperListComponent implements OnInit, OnDestroy
     }
 
     /**
-     * Show/hide completed courses
+     * Show/hide completed contents
      *
      * @param change
      */
