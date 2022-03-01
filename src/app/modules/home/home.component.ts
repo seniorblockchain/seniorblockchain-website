@@ -16,7 +16,18 @@ export class HomeComponent implements OnInit, OnDestroy
     options: AnimationOptions = {
         path: '/assets/animations/animation.json',
     };
-
+    blockchain: AnimationOptions = {
+        path: '/assets/animations/blockchain.json',
+    };
+    _2block: AnimationOptions = {
+        path: '/assets/animations/2block.json',
+    };
+        work: AnimationOptions = {
+        path: '/assets/animations/work.json',
+    };
+    database: AnimationOptions = {
+        path: '/assets/animations/database.json',
+    };
     animationCreated(animationItem: AnimationItem): void {
         console.log(animationItem);
     }

@@ -20,7 +20,7 @@
                 <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
                     welcome to Senior Blockchain
                 </div>
-                <div class="mt-3 sm:text-2xl text-center tracking-tight text-secondary">
+                <div class="mt-3 sm:text-2xl text-center tracking-tight text-secondary w-full max-w-sm md:max-w-4xl">
                     Senior Blockchain is a powerful and flexible Blockchain Development Platform designed for the needs
                     of real world financial services and businesses. </div>
 
@@ -88,8 +88,87 @@
                     </div>
                 </div>
             </div>
-             <!-- FAQs -->
-             <div class="mt-24 text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight text-center">Most
+
+            <sbchain-card class="flex flex-col mt-8 md:flex-row w-full max-w-sm md:max-w-4xl">
+
+                <div class="flex flex-col flex-auto m-8 mb-4">
+                    <div class="text-2xl font-semibold leading-tight">
+                        What Is a Blockchain?
+                    </div>
+                    <div class="mt-4 text-justify leading-loose">
+
+                        <p class="indent-8">A blockchain is a distributed database that is shared among the nodes of a
+                            computer network.
+                            As a database, a blockchain stores information electronically in digital format. Blockchains
+                            are best known for their crucial role in cryptocurrency systems, such as Bitcoin, for
+                            maintaining a secure and decentralized record of transactions. The innovation with a
+                            blockchain is that it guarantees the fidelity and security of a record of data and generates
+                            trust without the need for a trusted third party. </p>
+
+                        <div class="z-10 relative flex flex-col items-center">
+                            <ng-lottie width="300px" height="200px" [options]="_2block"
+                                (animationCreated)="animationCreated($event)"></ng-lottie>
+                        </div>
+
+                        <p class="indent-8 mt-2"> One key difference between a typical database and a blockchain is how
+                            the data is
+                            structured. A blockchain collects information together in groups, known as blocks, that hold
+                            sets of information. Blocks have certain storage capacities and, when filled, are closed and
+                            linked to the previously filled block, forming a chain of data known as the blockchain. All
+                            new information that follows that freshly added block is compiled into a newly formed block
+                            that will then also be added to the chain once filled.</p>
+
+                        <div class="z-10 relative flex flex-col items-center">
+                            <ng-lottie width="300px" height="200px" [options]="blockchain"
+                                (animationCreated)="animationCreated($event)"></ng-lottie>
+                        </div>
+
+                        <p class="indent-8 mt-2">
+                            A database usually structures its data into tables, whereas a blockchain, like its name
+                            implies, structures its data into chunks (blocks) that are strung together. This data
+                            structure inherently makes an irreversible time line of data when implemented in a
+                            decentralized nature. When a block is filled, it is set in stone and becomes a part of this
+                            time line. Each block in the chain is given an exact time stamp when it is added to the
+                            chain.</p>
+
+                        <div class="z-10 relative flex flex-col items-center">
+                            <ng-lottie width="300px" height="200px" [options]="database"
+                                (animationCreated)="animationCreated($event)"></ng-lottie>
+                        </div>
+                    </div>
+                </div>
+            </sbchain-card>
+
+
+            <sbchain-card class="flex flex-col mt-8 md:flex-row w-full max-w-sm md:max-w-4xl">
+
+                <div class="flex flex-col flex-auto m-8 mb-4">
+                    <div class="text-2xl font-semibold leading-tight">
+                        The next step
+                    </div>
+                    <div class="mt-4 text-justify leading-loose">
+
+
+                        <div class="z-10 relative flex flex-col items-center">
+                            <ng-lottie width="400px" height="300px" [options]="work"
+                                (animationCreated)="animationCreated($event)"></ng-lottie>
+                        </div>
+
+                        <p class="mt-2">Our mission is to expand the usage and availability of services built
+                            using blockchain technology, and to apply those services to the needs of real world
+                            financial services and businesses. We want to make blockchain technology available for
+                            everyone to use. And to do just that we are building the Senior blockchain and the Smart
+                            business Platform.</p>
+
+
+
+                    </div>
+                </div>
+            </sbchain-card>
+
+
+            <!-- FAQs -->
+            <div class="mt-24 text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight text-center">Most
                 frequently asked questions</div>
             <div class="mt-2 text-xl text-center text-secondary">Here are the most frequently asked questions you
                 may check before getting started</div>

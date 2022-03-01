@@ -13,6 +13,7 @@ import { HomeComponent } from 'app/modules/home/home.component';
 import { homeRoutes } from 'app/modules/home/home.routing';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { SBChainCardModule } from '@sbchain/components/card';
 @NgModule({
     declarations: [
         HomeComponent,
@@ -27,6 +28,7 @@ import player from 'lottie-web';
         MatInputModule,
         SBChainAlertModule,
         SharedModule,
+        SBChainCardModule
     ]
 })
 export class HomeModule
