@@ -11,7 +11,7 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class ContactComponent {
     options: AnimationOptions = {
-        path: '/assets/animations/contact.json',
+        path: '/assets/animations/contact-us.json',
     };
 
     animationCreated(animationItem: AnimationItem): void {
