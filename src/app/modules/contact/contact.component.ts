@@ -15,8 +15,7 @@ export class ContactComponent {
     };
 
     animationCreated(animationItem: AnimationItem): void {
-        console.log(animationItem);
-    }
+     }
 
     /**
      * Constructor

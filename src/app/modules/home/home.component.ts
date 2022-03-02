@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit, OnDestroy
         path: '/assets/animations/database.json',
     };
     animationCreated(animationItem: AnimationItem): void {
-        console.log(animationItem);
     }
 
     faqCategory: FaqCategory;
