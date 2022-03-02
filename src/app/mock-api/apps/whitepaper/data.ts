@@ -13,10 +13,15 @@ export const categories = [
     {
         id: 'cloud-computing-cat',
         title: 'Cloud computing',
-        slug: 'cloud-computing'
+        slug: 'cloudcomputing'
     },
     {
-        id: 'references',
+        id: 'seniorblockchain-cat',
+        title: 'Senior Blockchain',
+        slug: 'seniorblockchain'
+    },
+    {
+        id: 'references-cat',
         title: 'References',
         slug: 'references'
     },
@@ -39,10 +44,10 @@ export const contents = [
         }
     },
     {
-        id: 'blockchain1',
-        title: 'Blockchain: a distributed ledger',
-        slug: 'What is the blockchain?',
-        description: 'What is the blockchain?',
+        id: 'blockchain',
+        title: 'Blockchain',
+        slug: 'Blockchain',
+        description: 'a distributed ledger',
         category: 'Blockchain',
         duration: 30,
         totalSteps: 5,
@@ -55,11 +60,11 @@ export const contents = [
     }
     ,
     {
-        id: 'blockchain2',
-        title: 'Blockchain: a distributed ledger',
-        slug: 'blockchain',
-        description: 'Bitcoin, blockchain 2.0 and the growth of distributed ledger technology',
-        category: 'Blockchain',
+        id: 'cloudcomputing',
+        title: 'Cloud computing',
+        slug: 'cloud-computing',
+        description: 'What is cloud computing?',
+        category: 'cloudcomputing',
         duration: 30,
         totalSteps: 5,
         updatedAt: 'March 1, 2022',
@@ -71,11 +76,11 @@ export const contents = [
     }
     ,
     {
-        id: 'cloudcomputing',
-        title: 'Cloud computing',
-        slug: 'cloud-computing',
-        description: 'What is cloud computing?',
-        category: 'references',
+        id: 'seniorblockchain',
+        title: 'What is the Senior Blockchain?',
+        slug: 'seniorblockchain',
+        description: 'What is the Senior Blockchain?',
+        category: 'seniorblockchain',
         duration: 30,
         totalSteps: 5,
         updatedAt: 'March 1, 2022',
@@ -119,7 +124,8 @@ An attractive model for blockchain service provision exists in cloud computing. 
 Senior Blockchain will take a similar approach to blockchain deployment, enabling organisations to provision their own private blockchains, senior blockchain is responsible for its protection and management, and if possible, the blockchain project will create them virtually in the world of Metaverse. This approach means there are few unnecessary overheads whilst allowing businesses to secure the benefits of a blockchain-based solution, developing services via powerful APIs and lite web-based clients.
 </p>
 `;
-export const Blockchain1Content = `
+export const BlockchainContent = `
+<h3>What is the blockchain?</h3>
 <p class="indent-4">
 A blockchain or distributed ledger is new way of storing and transferring information. Centralised databases have been employed for many years by financial corporations and other organisations to store customer details and record transactions of one kind or another. These are carefully-guarded and closed systems in which only privileged operators are allowed to make entries. When a customer transfers money from one bank account to another, they make a request to the bank to do so on their behalf rather than engaging directly with the database that holds information about balances. Centralisation is inherent in the paradigm.
 </p>
@@ -161,8 +167,7 @@ The decentralised structure of the blockchain brings several key features in con
 </ul>
 </p>
 
-`;
-export const Blockchain2Content = `
+<h3>Bitcoin, blockchain 2.0 and the growth of distributed ledger technology</h3>
 <p class="indent-4">
 Although Bitcoin is very successful at transferring value and is an effective form of decentralised money, from the outset it was recognised that the same approach could be used to record information of almost any kind on the same shared basis. As well as cash, strings of characters on the blockchain could represent simple messages, ownership of physical or digital assets or securities, voting decisions, and so on.
 </p>
@@ -192,10 +197,25 @@ A noticeable shift has occurred towards the end of 2015 and in 2016, with a seri
 <p class="indent-4">
 The benefits of blockchain technology for companies and organisations of all sizes and types are becoming ever clearer. However, until now there have been few options for those who wish to deploy or use blockchain technology. They either have to invest the time and funds to create and maintain their own protocol from scratch, or use an existing open platform (such as Bitcoin itself), with all the limitations and problems that entails.
 </p>
+
+
 `;
+
 export const CloudComputingContent = `
+<h3>What is cloud computing?</h3>
 <p class="indent-4">
-The benefits of blockchain technology for companies and organisations of all sizes and types are becoming ever clearer. However, until now there have been few options for those who wish to deploy or use blockchain technology. They either have to invest the time and funds to create and maintain their own protocol from scratch, or use an existing open platform (such as Bitcoin itself), with all the limitations and problems that entails.
+Cloud computing refers to the practice of accessing data and IT resources via a remote provider, rather than relying solely on in-house hardware and software.
+</p>
+<p class="indent-4">
+In the internet era, businesses and individuals no longer need to purchase and maintain their own hardware, or even run their own software platforms. Instead, these can be housed by third parties in dedicated data centres and accessed as and when required.
+</p>
+
+<p class="indent-4">
+The benefits of such an approach are extensive. It means that resources can be allocated and paid for according to need, rather than purchased inefficiently and in advance; economies of scale are inherent in cloud provision. This allows for far greater flexibility and control over budgets, as well as enabling companies to scale rapidly when required. Consequently, almost all of us now use cloud computing in some form, particularly for email (including popular webmail platforms like Gmail and Yahoo) and storage (cloud drives such as AWS, OpenDrive, iCloud, Dropbox and so on).
+</p>
+
+<p class="indent-4">
+Although storage is one of the most popular applications of cloud computing, almost any IT resource an organisation needs can be provided in this way. Over and above Infrastructure-as-a-Service (IaaS), which includes servers, storage and network provision, there is a growing move to meet all computing needs via the cloud. Platformas-a-Service (PaaS) comprises the delivery of development tools and frameworks, databases and execution environments, whilst Software-as-a-Service (SaaS) allows applications to be run from the cloud.
 </p>
 `;
 export const ReferencesContent = `
@@ -204,8 +224,15 @@ export const ReferencesContent = `
     <li>[2] <a href="https://www.gov.uk/government/news/distributed-ledger-technology-beyond-block-chain" target="_blank">https://www.gov.uk/government/news/distributed-ledger-technology-beyond-block-chain</a></li>
     <li>[3] <a href="http://money.cnn.com/2015/11/02/technology/bitcoin-1-billion-invested" target="_blank">http://money.cnn.com/2015/11/02/technology/bitcoin-1-billion-invested</a></li>
 </ul>
-`;
 
+`;
+export const SeniorBlockchainContent = `
+<h3>Overview</h3>
+<p>
+Senior Blockchain is a powerful and flexible blockchain Development Platform designed for the needs of real-world financial services businesses and other organisations that want to develop, test and deploy applications on the blockchain. Senior blockchain apps can be developed in pure C# and can also utilize the Microsoft .NET framework, while also taking advantage of the powerful Senior Blockchain APIs and framework. Senior Blockchain significantly simplifies the development process for creating Blockchain applications and accelerates the development lifecycle for blockchain development projects. Senior Blockchain private chains allow businesses to deploy their own customised blockchains without the overheads inherent in running their own blockchain network infrastructure. Senior Blockchain’s turnkey solution enables developers and businesses to create, test and deploy blockchain-based applications quickly and easily, all without the costs and security concerns that would otherwise arise from an in-house implementation.
+</p>
+
+`;
 
 export const ContentSteps = [
     {
@@ -217,20 +244,21 @@ export const ContentSteps = [
     {
         order: 1,
         title: 'Blockchain',
-        subtitle: 'What is the blockchain?',
-        content: `<h2 class="text-2xl sm:text-3xl">What is the blockchain?</h1> ${Blockchain1Content}`
+        subtitle: 'a distributed ledger',
+        content: `<h2 class="text-2xl sm:text-3xl">Blockchain: a distributed ledger</h1> ${BlockchainContent}`
     },
+
     {
         order: 2,
-        title: 'Blockchain',
-        subtitle: 'Bitcoin, blockchain 2.0 and the growth of distributed ledger technology',
-        content: `<h2 class="text-2xl sm:text-3xl">Bitcoin, blockchain 2.0 and the growth of distributed ledger technology</h1> ${Blockchain2Content}`
-    },
-    {
-        order: 3,
         title: 'Cloud Computing',
         subtitle: 'What is cloud Computing?',
         content: `<h2 class="text-2xl sm:text-3xl">Cloud Computing</h1> ${CloudComputingContent}`
+    },
+      {
+        order: 3,
+        title: 'What is the Senior Blockchain?',
+        subtitle: 'What is the Senior Blockchain?',
+        content: `<h2 class="text-2xl sm:text-3xl">What is the Senior Blockchain?</h1> ${SeniorBlockchainContent}`
     },
     {
         order: 4,
