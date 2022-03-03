@@ -3,12 +3,12 @@ export const categories = [
     {
         id: 'abstract-cat',
         title: 'Abstract',
-        slug: 'Abstract'
+        slug: 'abstract'
     },
     {
         id: 'blockchain-cat',
         title: 'Blockchain',
-        slug: 'Blockchain'
+        slug: 'blockchain'
     },
     {
         id: 'cloud-computing-cat',
@@ -21,6 +21,12 @@ export const categories = [
         slug: 'seniorblockchain'
     },
     {
+        id: 'blockcore-cat',
+        title: 'Blockcore',
+        slug: 'blockcore'
+    },
+
+    {
         id: 'references-cat',
         title: 'References',
         slug: 'references'
@@ -31,11 +37,11 @@ export const contents = [
     {
         id: 'abstract',
         title: 'Abstract',
-        slug: 'Abstract',
+        slug: 'abstract',
         description: 'Brief description of senior blockchain',
-        category: 'Abstract',
+        category: 'abstract',
         duration: 30,
-        totalSteps: 5,
+        totalSteps: 6,
         updatedAt: 'March 1, 2022',
         featured: true,
         progress: {
@@ -46,11 +52,11 @@ export const contents = [
     {
         id: 'blockchain',
         title: 'Blockchain',
-        slug: 'Blockchain',
+        slug: 'blockchain',
         description: 'a distributed ledger',
-        category: 'Blockchain',
+        category: 'blockchain',
         duration: 30,
-        totalSteps: 5,
+        totalSteps: 6,
         updatedAt: 'March 1, 2022',
         featured: true,
         progress: {
@@ -66,7 +72,7 @@ export const contents = [
         description: 'What is cloud computing?',
         category: 'cloudcomputing',
         duration: 30,
-        totalSteps: 5,
+        totalSteps: 6,
         updatedAt: 'March 1, 2022',
         featured: true,
         progress: {
@@ -82,11 +88,27 @@ export const contents = [
         description: 'What is the Senior Blockchain?',
         category: 'seniorblockchain',
         duration: 30,
-        totalSteps: 5,
+        totalSteps: 6,
         updatedAt: 'March 1, 2022',
         featured: true,
         progress: {
             currentStep: 3,
+            completed: 0
+        }
+    }
+    ,
+    {
+        id: 'blockcore',
+        title: 'What is the Blockcore?',
+        slug: 'blockcore',
+        description: 'What is the Blockcore?',
+        category: 'blockcore',
+        duration: 30,
+        totalSteps: 6,
+        updatedAt: 'March 1, 2022',
+        featured: true,
+        progress: {
+            currentStep: 4,
             completed: 0
         }
     }
@@ -98,11 +120,11 @@ export const contents = [
         description: 'List of references used in White Paper',
         category: 'references',
         duration: 30,
-        totalSteps: 5,
+        totalSteps: 6,
         updatedAt: 'March 1, 2022',
         featured: true,
         progress: {
-            currentStep: 4,
+            currentStep: 5,
             completed: 0
         }
     }
@@ -231,8 +253,32 @@ export const SeniorBlockchainContent = `
 <p>
 Senior Blockchain is a powerful and flexible blockchain Development Platform designed for the needs of real-world financial services businesses and other organisations that want to develop, test and deploy applications on the blockchain And raise capital for their projects or build their projects in metaverse. Senior Blockchain significantly simplifies the development process for creating Blockchain applications and accelerates the development lifecycle for blockchain development projects. Senior Blockchain private chains allow businesses to deploy their own customised blockchains without the overheads inherent in running their own blockchain network infrastructure. Senior Blockchain’s turnkey solution enables developers and businesses to create, test and deploy blockchain-based applications quickly and easily, all without the costs and security concerns that would otherwise arise from an in-house implementation.
 </p>
+<h3>What does it solve</h3>
+<p>
+There are currently technical hurdles to getting the average individual And organizations and business owners interested in the concept and usage of cryptocurrencies. Also, there is huge potential to improve the Business through the implementation of blockchain solutions. Senior Blockchain offers solutions to make it easier for people and organizations to raise capital and invest.
+</p>
+<ul>
+   <li>
+       <b>Organizations, business owners or owners of sensible ideas:</b>
+       The senior blockchain examines the project or idea, and by researching and studying it and the necessary studies, builds a private blockchain related to it and prepares for the initial public offering of coins that provide the initial capital to implement the project or idea and give it to the owner. Put the blockchain. Senior Blockchain also oversees all project or idea implementation activities and protects the funds raised. If the project has the ability to become a virtual reality, senior blockchain builds it in the virtual world and executes it according to an agreement with the owner of the blockchain. This virtual world is created in Senior Blockchain's private network. Its coin is the SBC virtual world.
+   </li>
+   <li>
+       <b>Investors or people:</b>
+       Anyone anywhere in the world who wants to invest in projects that are monitored and not scams can invest by buying project coins, and when the project coins are listed in reputable exchanges, they can trade their coins. . Certainly the price of coins will be higher than the initial offering price and investors will benefit.
+   </li>
+</ul>
+
+<h3>How does the core of Senior Blockchain work?</h3>
+<p>
+Senior Blockchain uses Blockcore as its core. Blockcore  is a platform to build Layer 1 consensus networks based on the Bitcoin protocol, built on the .NET Core framework and written entirely in C#. Blockcore aims to maintain an alternative C# Bitcoin implementation, based on the NBitcoin & Stratis projects.
+</p>
+`;
+
+export const BlockcoreContent = `
+<h3>Overview</h3>
 
 `;
+
 
 export const ContentSteps = [
     {
@@ -262,6 +308,12 @@ export const ContentSteps = [
     },
     {
         order: 4,
+        title: 'What is the Blockcore?',
+        subtitle: 'What is the Blockcore?',
+        content: `<h2 class="text-2xl sm:text-3xl">What is the Blockcore?</h1> ${BlockcoreContent}`
+    },
+    {
+        order: 5,
         title: 'References',
         subtitle: 'List of references used in White Paper',
         content: `<h2 class="text-2xl sm:text-3xl">References</h1> ${ReferencesContent}`
