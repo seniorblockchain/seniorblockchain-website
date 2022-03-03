@@ -28,6 +28,10 @@ export class HomeComponent implements OnInit, OnDestroy
     database: AnimationOptions = {
         path: '/assets/animations/database.json',
     };
+    space: AnimationOptions = {
+        path: '/assets/animations/space.json',
+    };
+
     animationCreated(animationItem: AnimationItem): void {
     }
 
