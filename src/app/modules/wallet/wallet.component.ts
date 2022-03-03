@@ -9,8 +9,8 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class WalletComponent
 {
-    options: AnimationOptions = {
-        path: '/assets/animations/wallet.json',
+    pos: AnimationOptions = {
+        path: '/assets/animations/pos.json',
     };
     animationCreated(animationItem: AnimationItem): void {
     }
