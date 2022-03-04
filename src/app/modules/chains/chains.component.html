@@ -1,0 +1,172 @@
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
+
+
+
+    <!-- Header -->
+    <div class="relative flex-0 py-8 px-4 sm:p-16 overflow-hidden bg-gray-800 dark">
+        <!-- Background - @formatter:off -->
+        <!-- Rings -->
+        <svg class="absolute inset-0 pointer-events-none" viewBox="0 0 960 540" width="100%" height="100%"
+            preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+            <g class="text-gray-700 opacity-25" fill="none" stroke="currentColor" stroke-width="100">
+                <circle r="234" cx="196" cy="23"></circle>
+                <circle r="234" cx="790" cy="491"></circle>
+            </g>
+        </svg>
+        <!-- @formatter:on -->
+        <div class="z-10 relative flex flex-col items-center">
+            <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
+                Chains
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex flex-auto p-6 sm:p-10">
+
+        <div class="flex flex-col flex-auto w-full max-w-xs sm:max-w-5xl mx-auto">
+
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div class="z-10 relative flex flex-col items-center">
+                    <ng-lottie width="400px" height="300px" [options]="options"
+                        (animationCreated)="animationCreated($event)"></ng-lottie>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex flex-col">
+                        <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Chains
+                        </div>
+                    </div>
+                </div>
+                <div class="my-8 space-y-8">
+                    <div class="flex flex-col">
+                        <p>
+                            The chains managed by Senior Blockchain are shown below.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 w-full min-w-0 mt-8">
+                <ng-container>
+                    <sbchain-card class="flex flex-col lg:flex-row max-w-full filter-pricing">
+                        <div class="p-6 sm:p-8 lg:p-10">
+                            <div class="text-3xl font-bold">Senior Block Coin</div>
+                            <div class="mt-2 leading-relaxed text-secondary text-justify">
+                                The main coin of senior blockchain is called senior block coin and with this coin you can buy and sell whatever you want in the metaverse world that senior blockchain builds.
+                            </div>
+                            <div class="flex items-center mt-10">
+                                <div class="font-medium text-secondary">INCLUDED FEATURES</div>
+                                <div class="flex-auto ml-2 border-b-2"></div>
+                            </div>
+                            <!-- Features -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 mt-6">
+                                <div class="flex items-center">
+                                    <mat-icon
+                                        class="icon-size-5 text-primary"
+                                        [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                                    <div class="ml-2">Dedicated blockchain</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <mat-icon
+                                        class="icon-size-5 text-primary"
+                                        [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                                    <div class="ml-2">Proof of stock</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <mat-icon
+                                        class="icon-size-5 text-primary"
+                                        [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                                    <div class="ml-2">Dedicated wallet</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <mat-icon
+                                        class="icon-size-5 text-primary"
+                                        [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                                    <div class="ml-2">Open Source</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Price -->
+                        <div class="flex flex-col items-center p-8 lg:px-10 lg:py-12 lg:min-w-80 bg-gray-100 dark:bg-black dark:bg-opacity-10">
+                            <div class="flex items-center whitespace-nowrap">
+                                <div class="text-8xl font-extrabold tracking-tight">$0.08</div>
+                                <div class="ml-2 text-2xl font-semibold text-secondary">USD</div>
+                            </div>
+                            <div class="font-medium text-center text-secondary">
+                                <div>The above price is for the initial supply of SBC coins</div>
+
+                            </div>
+                            <button
+                                class="w-full mt-8 lg:mt-auto"
+                                mat-flat-button
+                                [color]="'primary'">
+                                Go to SBC Exchange
+                            </button>
+                        </div>
+                    </sbchain-card>
+                    <sbchain-card class="flex flex-col lg:flex-row max-w-full filter-pricing">
+                        <div class="p-6 sm:p-8 lg:p-10">
+                            <div class="text-3xl font-bold">Royal Sports City</div>
+                            <div class="mt-2 leading-relaxed text-secondary text-justify">
+                                Royal is the name of a sports, tourist and residential city in Oman that all people of the world can invest in the construction of this city and buy the city's coins. Later, the RSC will be the royal city coin and all transactions in this city will be done with this coin
+                            </div>
+                            <div class="flex items-center mt-10">
+                                <div class="font-medium text-secondary">INCLUDED FEATURES</div>
+                                <div class="flex-auto ml-2 border-b-2"></div>
+                            </div>
+                            <!-- Features -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 mt-6">
+                                <div class="flex items-center">
+                                    <mat-icon
+                                        class="icon-size-5 text-primary"
+                                        [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                                    <div class="ml-2">Dedicated blockchain</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <mat-icon
+                                        class="icon-size-5 text-primary"
+                                        [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                                    <div class="ml-2">Proof of stock</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <mat-icon
+                                        class="icon-size-5 text-primary"
+                                        [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                                    <div class="ml-2">Dedicated wallet</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <mat-icon
+                                        class="icon-size-5 text-primary"
+                                        [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                                    <div class="ml-2">Open Source</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Price -->
+                        <div class="flex flex-col items-center p-8 lg:px-10 lg:py-12 lg:min-w-80 bg-gray-100 dark:bg-black dark:bg-opacity-10">
+                            <div class="flex items-center whitespace-nowrap">
+                                <div class="text-8xl font-extrabold tracking-tight">$1.01</div>
+                                <div class="ml-2 text-2xl font-semibold text-secondary">USD</div>
+                            </div>
+                            <div class="font-medium text-center text-secondary">
+                                <div>The above price is for the initial supply of RSC coins</div>
+
+                            </div>
+                            <button
+                                class="w-full mt-8 lg:mt-auto"
+                                mat-flat-button
+                                [color]="'primary'">
+                                Go to RSC Exchange
+                            </button>
+                        </div>
+                    </sbchain-card>
+                </ng-container>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -100,7 +100,7 @@ export const appRoutes: Route[] = [
             initialData: InitialDataResolver,
         },
         children: [
-            { path: 'docs', loadChildren: () => import('app/modules/docs/docs.module').then(m => m.DocsModule) },
+            { path: 'chains', loadChildren: () => import('app/modules/chains/chains.module').then(m => m.ChainsModule) },
         ]
     }
 

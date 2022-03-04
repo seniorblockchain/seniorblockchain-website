@@ -2,22 +2,24 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
+
+
 @Component({
-    selector     : 'wallet',
-    templateUrl  : './wallet.component.html',
+    selector: 'chains',
+    templateUrl: './chains.component.html',
     encapsulation: ViewEncapsulation.None
 })
-export class WalletComponent
-{
-    pos: AnimationOptions = {
-        path: '/assets/animations/download-wallet.json',
+export class ChainsComponent {
+    options: AnimationOptions = {
+        path: '/assets/animations/chains.json',
     };
+
     animationCreated(animationItem: AnimationItem): void {
-    }
+     }
+
     /**
      * Constructor
      */
-    constructor()
-    {
+    constructor() {
     }
 }

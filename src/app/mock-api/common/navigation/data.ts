@@ -156,11 +156,11 @@ export const horizontalNavigation: SBChainNavigationItem[] = [
         link : '/node'
     },
     {
-        id   : 'docs',
-        title: 'Docs',
+        id   : 'chains',
+        title: 'Chains',
         type : 'basic',
         icon : 'heroicons_outline:code',
-        link : '/docs'
+        link : '/chains'
     },
     {
         id   : 'faq',
