@@ -14,7 +14,7 @@ import player from 'lottie-web';
 
 const exampleRoutes: Route[] = [
     {
-        path     : '',
+        path: '',
         component: WalletComponent
     }
 ];
@@ -23,7 +23,7 @@ const exampleRoutes: Route[] = [
     declarations: [
         WalletComponent
     ],
-    imports     : [
+    imports: [
         RouterModule.forChild(exampleRoutes),
         MatIconModule,
         MatButtonModule,
@@ -33,10 +33,9 @@ const exampleRoutes: Route[] = [
     ]
 
 })
-export class WalletModule
-{
+export class WalletModule {
 }
 export function playerFactory() {
     return player;
-  }
+}
 

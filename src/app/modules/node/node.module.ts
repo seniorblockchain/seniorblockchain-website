@@ -1,3 +1,4 @@
+/* eslint-disable prefer-arrow/prefer-arrow-functions */
 /* eslint-disable arrow-body-style */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { NgModule } from '@angular/core';
@@ -8,9 +9,8 @@ import { Route, RouterModule } from '@angular/router';
 import { SBChainCardModule } from '@sbchain/components/card';
 import { SBChainHighlightModule } from '@sbchain/components/highlight';
 import { NodeComponent } from './node.component';
-
-
-
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
 const exampleRoutes: Route[] = [
     {
@@ -29,10 +29,14 @@ const exampleRoutes: Route[] = [
         MatButtonModule,
         MatDividerModule,
         SBChainCardModule,
-        SBChainHighlightModule
+        SBChainHighlightModule,
+        LottieModule.forRoot({ player: playerFactory }),
     ]
 
 })
 export class NodeModule
 {
+}
+export function playerFactory() {
+    return player;
 }
