@@ -25,6 +25,7 @@
         "@angular/platform-browser": "14.0.0",
         "@angular/platform-browser-dynamic": "14.0.0",
         "@angular/router": "14.0.0",
+        "@angular/service-worker": "14.0.0",
         "@lottiefiles/lottie-player": "^1.5.7",
         "@ngneat/transloco": "4.0.0",
         "apexcharts": "3.35.3",
