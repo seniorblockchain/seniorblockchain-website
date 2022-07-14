@@ -31,6 +31,13 @@ export const defaultNavigation: SBChainNavigationItem[] = [
         link : '/docs'
     },
     {
+        id   : 'chains',
+        title: 'Chains',
+        type : 'basic',
+        icon : 'heroicons_outline:code',
+        link : '/chains'
+    },
+    {
         id   : 'faq',
         title: 'FAQ',
         type : 'basic',
@@ -75,6 +82,13 @@ export const compactNavigation: SBChainNavigationItem[] = [
         link : '/docs'
     },
     {
+        id   : 'chains',
+        title: 'Chains',
+        type : 'basic',
+        icon : 'heroicons_outline:code',
+        link : '/chains'
+    },
+    {
         id   : 'faq',
         title: 'FAQ',
         type : 'basic',
@@ -117,6 +131,13 @@ export const futuristicNavigation: SBChainNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:code',
         link : '/docs'
+    },
+    {
+        id   : 'chains',
+        title: 'Chains',
+        type : 'basic',
+        icon : 'heroicons_outline:code',
+        link : '/chains'
     },
     {
         id   : 'faq',

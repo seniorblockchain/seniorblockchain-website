@@ -1,19 +1,6 @@
 <div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
-
-
-
     <!-- Header -->
-    <div class="relative flex-0 py-8 px-4 sm:p-16 overflow-hidden bg-gray-800 dark">
-        <!-- Background - @formatter:off -->
-        <!-- Rings -->
-        <svg class="absolute inset-0 pointer-events-none" viewBox="0 0 960 540" width="100%" height="100%"
-            preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-            <g class="text-gray-700 opacity-25" fill="none" stroke="currentColor" stroke-width="100">
-                <circle r="234" cx="196" cy="23"></circle>
-                <circle r="234" cx="790" cy="491"></circle>
-            </g>
-        </svg>
-        <!-- @formatter:on -->
+    <div class="relative flex-0 py-8 px-4 sm:p-6 overflow-hidden dark">
         <div class="z-10 relative flex flex-col items-center">
             <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
                 Wallet
@@ -25,105 +12,128 @@
     <div class="flex flex-auto p-6 sm:p-10">
 
         <div class="flex flex-col flex-auto w-full max-w-xs sm:max-w-5xl mx-auto">
-
             <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
-                <div class="text-2xl font-semibold leading-tight">Blockcore Hub</div>
+                <div class="text-2xl font-semibold leading-tight">Wallet</div>
                 <div class="z-10 relative flex flex-col items-center">
-                    <ng-lottie width="400px" height="300px" [options]="pos"
+                    <ng-lottie width="300px" height="250px" [options]="pos"
                         (animationCreated)="animationCreated($event)"></ng-lottie>
                 </div>
                 <div class="my-8 space-y-8">
                     <div class="flex flex-col text-justify">
                         <p>
-                            The Blockcore uses a Proof of Stake (PoS) algorithm to validate transactions, so owners of
-                            SBC can decide to stake their SBC. Once you are staking SBC , you can write blocks to the
-                            blockchain and earn SBC doing this. Importantly, the SBC Wallet is dual purpose; it enables
-                            you to stake your SBC in addition to making transactions. Staking helps you strengthen the
-                            blockchain network on which your SBC Tokens are held. A full copy of the SBC blockchain is
-                            held on every device the SBC wallet is running on, so the wallet is effectively sitting on
-                            top of a Blockcore Full Node. When the Full Node detects SBC Tokens have been staked, it
-                            actively mines thereby contributing to the overall power and resilience of the network.
+                            Blockcore Wallet is a Blockcore, Senior Coin and Royal Coin Non-Custodial HD wallet in your
+                            browser for Coins, Tokens, Identities (DID), NFTs and more.
                         </p>
 
                     </div>
                 </div>
 
             </div>
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full min-w-0 mb-8 mt-8">
+                <ng-container>
+                    <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
 
+                        <div class="flex flex-col flex-auto w-full p-8 text-center">
+                            <div
+                                class="mt-1 text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-center text-primary">
+                                Chrome Web Store
+                            </div>
+                            <div class="text-secondary">extension</div>
+                        </div>
+                        <div class="flex items-center w-full border-t divide-x">
+                            <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://chrome.google.com/webstore/detail/blockcore-wallet/peigonhbenoefaeplkpalmafieegnapj'">
+                                <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:download'">
+                                </mat-icon>
+                                <span class="ml-2">download</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
 
+                        <div class="flex flex-col flex-auto w-full p-8 text-center">
+                            <div
+                                class="mt-1 text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-center text-primary">
+                                Website
+                            </div>
+                            <div class="text-secondary">pwa application</div>
+                        </div>
+                        <div class="flex items-center w-full border-t divide-x">
+                            <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
+                                [href]="'https://wallet.seniorblockchain.io'">
+                                <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:globe-alt'">
+                                </mat-icon>
+                                <span class="ml-2">Go to Wallet</span>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div class="text-2xl font-semibold leading-tight">Hub</div>
+                <div class="my-8 space-y-8">
+                    <div class="flex flex-col text-justify">
+                        <p>
+                            The Blockcore Hub is a unified app that has all the normal wallet features you'd expect and
+                            more. It runs a full node on your local computer, downloading and processing all blockchain
+                            data.
+                        </p>
 
+                    </div>
+                </div>
+            </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full min-w-0 mt-8">
                 <ng-container>
                     <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
-                        <!-- Logo -->
                         <div class="flex flex-col flex-auto w-full p-8 text-center">
-                            <div class="mt-1 text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-center text-primary">
+                            <div
+                                class="mt-1 text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-center text-primary">
                                 Windows
                             </div>
                             <div class="text-secondary">64bit</div>
                         </div>
-                        <!-- Download -->
                         <div class="flex items-center w-full border-t divide-x">
                             <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
-                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-win-x64.exe'">
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases'">
                                 <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:download'">
                                 </mat-icon>
-                                <span class="ml-2">direct download</span>
-                            </a>
-                            <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
-                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-win-x64.exe'">
-                                <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:cloud-download'">
-                                </mat-icon>
-                                <span class="ml-2">github</span>
+                                <span class="ml-2">download</span>
                             </a>
                         </div>
                     </div>
                     <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
-                        <!-- Logo -->
                         <div class="flex flex-col flex-auto w-full p-8 text-center">
-                            <div class="mt-1 text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-center text-primary">
+                            <div
+                                class="mt-1 text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-center text-primary">
                                 Mac
                             </div>
                             <div class="text-secondary">dmg file</div>
                         </div>
-                        <!-- Download -->
                         <div class="flex items-center w-full border-t divide-x">
                             <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
-                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-mac.dmg'">
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases'">
                                 <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:download'">
                                 </mat-icon>
-                                <span class="ml-2">direct download</span>
-                            </a>
-                            <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
-                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-mac.dmg'">
-                                <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:cloud-download'">
-                                </mat-icon>
-                                <span class="ml-2">github</span>
+                                <span class="ml-2">download</span>
                             </a>
                         </div>
                     </div>
                     <div class="flex flex-col flex-auto items-center bg-card shadow rounded-2xl overflow-hidden">
-                        <!-- Logo -->
+
                         <div class="flex flex-col flex-auto w-full p-8 text-center">
-                            <div class="mt-1 text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-center text-primary">
+                            <div
+                                class="mt-1 text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-center text-primary">
                                 Linux
                             </div>
                             <div class="text-secondary">64bit - 32bit</div>
                         </div>
-                        <!-- Download -->
                         <div class="flex items-center w-full border-t divide-x">
                             <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
-                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-linux-x86_64.AppImage'">
+                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases'">
                                 <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:download'">
                                 </mat-icon>
-                                <span class="ml-2">direct download</span>
-                            </a>
-                            <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover"
-                                [href]="'https://github.com/seniorblockchain/blockcore-hub/releases/download/v1.0.8/Blockcore.Hub-1.0.8-linux-x86_64.AppImage'">
-                                <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:cloud-download'">
-                                </mat-icon>
-                                <span class="ml-2">github</span>
+                                <span class="ml-2">download</span>
                             </a>
                         </div>
                     </div>
@@ -131,26 +141,6 @@
             </div>
 
 
-
-            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow mt-8">
-                <div class="flex items-center">
-                    <div class="flex flex-col">
-                        <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate"> Case study: Proof of
-                            Work
-                        </div>
-                    </div>
-                </div>
-                <div class="my-8 space-y-8">
-                    <div class="flex flex-col text-justify">
-                        <p>
-                            Because even small stakes have a chance to mine, staking democratizes the mining process
-                            when compared with Proof of Work solutions. To have any chance of earning rewards from
-                            mining on a mature Proof of Work blockchain, considerable expenditure on hardware and energy
-                            is required.
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>
